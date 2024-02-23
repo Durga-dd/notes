@@ -1,0 +1,38 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-toolbar>Daily Note</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#" class="menu-list-style"
+        ><mat-icon aria-label="notes icon list">notes</mat-icon>All notes</a
+      >
+      <a mat-list-item href="#" class="menu-list-style"
+        ><mat-icon aria-label="locked notes">lock</mat-icon>Locked notes</a
+      >
+      <a mat-list-item href="#" class="menu-list-style"
+        ><mat-icon aria-label="deleted notes">delete</mat-icon>Recycle bin</a
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Notes</span>
+    </mat-toolbar>
+    <app-notes-list></app-notes-list>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

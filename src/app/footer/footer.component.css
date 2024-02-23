@@ -1,0 +1,8 @@
+.create-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    position: absolute;
+    bottom: 30px;
+    right:0px;
+  }
