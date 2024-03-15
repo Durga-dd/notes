@@ -1,0 +1,30 @@
+<h1 mat-dialog-title>{{ data.title === undefined ? "Title" : data.title }}</h1>
+<mat-dialog-content class="mat-typography">
+  <div class="row">
+    <div class="form-group col-md-12">
+      <input
+        class="form-control"
+        [(ngModel)]="data.title"
+        placeholder="Enter your Title"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-12">
+      <label id="notes-description">Description</label>
+      <textarea
+        class="form-control"
+        for="notes-description"
+        [(ngModel)]="data.description"
+        placeholder="What's on your mind ?"
+      ></textarea>
+    </div>
+  </div>
+</mat-dialog-content>
+<hr />
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+  <button mat-button [mat-dialog-close]="true" (click)="dialogRef.close(data)">
+    Save
+  </button>
+</mat-dialog-actions>

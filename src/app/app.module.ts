@@ -15,7 +15,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
-import { FooterComponent } from './footer/footer.component';
+import { NotesComponent } from './notes/notes.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,12 +27,13 @@ import { FooterComponent } from './footer/footer.component';
     NotesListComponent,
     HeaderComponent,
     NavbarComponent,
-    FooterComponent,
+    NotesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatSlideToggleModule,
     MatToolbarModule,
     MatButtonModule,
@@ -36,6 +41,9 @@ import { FooterComponent } from './footer/footer.component';
     MatIconModule,
     MatListModule,
     MatCardModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

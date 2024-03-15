@@ -19,3 +19,18 @@
 .menu-list-style{
 align-items: center;
 }
+
+.create-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+  position: absolute;
+  bottom: 30px;
+  right:0px;
+}
+
+.filter-button{
+  position: fixed;
+    top: 75px;
+    right: 30px;
+}

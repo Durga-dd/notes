@@ -32,7 +32,21 @@
       </button>
       <span>Notes</span>
     </mat-toolbar>
-    <app-notes-list></app-notes-list>
-    <app-footer></app-footer>
+    <app-notes-list [notelist]="notelist"></app-notes-list>
+    <div class="filter-button">
+      <button mat-mini-fab color="primary" aria-label="Filter icon">
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+    <div class="create-button-container">
+      <button
+        (click)="openDialog()"
+        mat-mini-fab
+        color="primary"
+        aria-label="Example icon button with a plus one icon"
+      >
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
